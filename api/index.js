@@ -18,6 +18,6 @@ app.use(express.json());
 app.use("/api/auth", authBook);
 app.use("/api/books", updateBook);
 
-app.listen(8800, ()=> {
+app.listen(process.env.PORT || 8800 , ()=> {
     console.log("Backend server is running");
 })
