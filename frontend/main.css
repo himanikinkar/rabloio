@@ -19,75 +19,149 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	color: #FFF;
-	background-color: var(--dark);
+	background-color: #c2c8d3;
 }
-
+.upper-container{
+	height: 820px;
+	width: 1300px;
+	background-color: rgb(221, 225, 236);
+	margin-left: 100px;
+	margin-top: 45px;
+}
 header {
 	padding: 2rem 1rem;
 	max-width: 800px;
 	width: 100%;
-	margin: 0 auto;
+	/* margin: 0 auto;*/
+    margin-left: 50px;
+} 
+.header-content{
+	display: inline-block;
 }
-
-header h1{ 
+.header-text{
+	color: #1F2937;
+}
+a{
+	font-size: 20px;
+	color: #6B7280;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.inner-content .plus {
+	position:relative;
+	left:100px;
+	top:100px;
+	border: 1px dotted white;
+	width: 3px;
+	height: 3px;
+	background-color: black;
+	box-sizing: border-box;
+	transform: scale(11);
+  }
+  
+  .plus:hover {
+	transform: scale(10);
+  }
+/* header h1{ 
 	font-size: 2.5rem;
 	font-weight: 300;
 	color: var(--grey);
-	margin-bottom: 1rem;
-}
+	margin-left: 1rem;
+} */
 
-#new-task-form {
+ #new-task-form {
 	display: flex;;
 }
-
+.search{
+	height: 50px;
+	width: 500px;
+	border-radius: 1rem;
+	margin-right: 12px;
+	font-size: 20px;
+	margin-top: 32px;
+}
+.search-text{
+	height: 50px;
+	width: 80px;
+	margin-top: 32px;
+	border-radius: 1rem;
+	font-size: 20px;
+	margin-right: 50px;
+	background-color: #515a68;
+}
 input, button {
 	appearance: none;
-	border: none;
+	border: 2px;
 	outline: none;
 	background: none;
+    color:#7b7678;
+	
 }
 
-#new-task-input {
-	flex: 1 1 0%;
-	background-color: var(--darker);
+ #new-task-input {
+	flex: 1 1 0%; 
+	background-color: #515a68;
 	padding: 1rem;
 	border-radius: 1rem;
-	margin-right: 1rem;
+	/* margin-right: 1rem; 
 	color: var(--light);
-	font-size: 1.25rem;
-}
+	font-size: 1.25rem;*/
+} 
 
-#new-task-input::placeholder {
-	color: var(--grey);
+.book-list{
+	/* background-color: #111827; */
+	margin-bottom: 12px;
+	height: 570px;
+	width: 1200px;
+	background-color: hsl(260, 1%, 52%);
+	position: absolute;
+	overflow-y: scroll;
 }
-
-#new-task-submit {
-	color: var(--pink);
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
+.book-list h2{
+	margin-bottom: 15px;
+	color: #1F2937;
+	font-size: 30px;
+	padding-left: 24px;
+	padding-top: 15px;
+	position: relative;
+	/* overflow-y: scroll; */
 }
-
-#new-task-submit:hover {
-	opacity: 0.8;
-}
-
-#new-task-submit:active {
-	opacity: 0.6;
-}
-
 main {
 	flex: 1 1 0%;
 	max-width: 800px;
 	width: 100%;
-	margin: 0 auto;
+	margin-left: 60px;
 }
+.task{
+	display: inline-block;
+}
+.content{
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: rgb(95, 94, 94);
+	height: 300px;
+	width: 250px;
+	margin-left: 29px;
+	position: relative;
+	margin-bottom: 12px;
+}
+.title{
+	display: flex;
+	justify-content: space-between;
+	flex: 1 1 0%;
+	padding-top: 3px;
 
-.task-list {
+}
+.title-heading{
+	font-size: 20px;
+	padding-left: 5px;
+	color: #111827;
+}
+.entry{
+	padding-right: 5px;
+	font-size: 18px;
+	color: #1F2937;
+}
+/* .task-list {
 	padding: 1rem;
 }
 
@@ -96,9 +170,9 @@ main {
 	font-weight: 300;
 	color: var(--grey);
 	margin-bottom: 1rem;
-}
+} */
 
-#tasks .task {
+/* #tasks .task {
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--darkest);
@@ -122,7 +196,7 @@ main {
 .task .content .text:not(:read-only) {
 	color: var(--pink);
 }
-
+*/
 .task .actions {
 	display: flex;
 	margin: 0 -0.5rem;
@@ -135,6 +209,7 @@ main {
 	font-weight: 700;
 	text-transform: uppercase;
 	transition: 0.4s;
+	padding-top: 40px;
 }
 
 .task .actions button:hover {
@@ -146,11 +221,12 @@ main {
 }
 
 .task .actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	/* background-image: linear-gradient(to right, var(--pink), var(--purple)); */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-color:  rgb(39, 36, 53);
 }
 
 .task .actions .delete {
-	color: crimson;
-}
+	color: rgb(39, 36, 53);
+}  
